@@ -1,0 +1,154 @@
+---ADD---
+force -freeze sim:/alu/operand1 32'h00000005 0
+force -freeze sim:/alu/operand2 32'h00000006 0
+force -freeze sim:/alu/operation 4'h0 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000005 0
+force -freeze sim:/alu/operand2 32'h00000006 0
+force -freeze sim:/alu/operation 4'h0 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000015 0
+force -freeze sim:/alu/operand2 32'hffffffff 0
+force -freeze sim:/alu/operation 4'h0 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000015 0
+force -freeze sim:/alu/operand2 32'hffffffff 0
+force -freeze sim:/alu/operation 4'h0 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+
+---SUB---
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'h00000005 0
+force -freeze sim:/alu/operation 4'h1 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'h00000005 0
+force -freeze sim:/alu/operation 4'h1 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'h0000000f 0
+force -freeze sim:/alu/operation 4'h1 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'h0000000f 0
+force -freeze sim:/alu/operation 4'h1 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+
+---AND--- 
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'h00000008 0
+force -freeze sim:/alu/operation 4'h2 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'h00000008 0
+force -freeze sim:/alu/operation 4'h2 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'hFFFFFFFF 0
+force -freeze sim:/alu/operation 4'h2 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000008 0
+force -freeze sim:/alu/operand2 32'hFFFFFFFF 0
+force -freeze sim:/alu/operation 4'h2 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+
+---OR---
+force -freeze sim:/alu/operand1 32'h00000000 0
+force -freeze sim:/alu/operand2 32'h00000000 0
+force -freeze sim:/alu/operation 4'h3 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000000 0
+force -freeze sim:/alu/operand2 32'h00000000 0
+force -freeze sim:/alu/operation 4'h3 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000003 0
+force -freeze sim:/alu/operand2 32'h00000001 0
+force -freeze sim:/alu/operation 4'h3 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000003 0
+force -freeze sim:/alu/operand2 32'h00000001 0
+force -freeze sim:/alu/operation 4'h3 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+
+---SLT---
+force -freeze sim:/alu/operand1 32'h00000000 0
+force -freeze sim:/alu/operand2 32'h00000001 0
+force -freeze sim:/alu/operation 4'hb 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000000 0
+force -freeze sim:/alu/operand2 32'h00000001 0
+force -freeze sim:/alu/operation 4'hb 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000001 0
+force -freeze sim:/alu/operand2 32'h00000000 0
+force -freeze sim:/alu/operation 4'hb 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000001 0
+force -freeze sim:/alu/operand2 32'h00000000 0
+force -freeze sim:/alu/operation 4'hb 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+
+---MULT---
+force -freeze sim:/alu/operand1 32'h00000005 0
+force -freeze sim:/alu/operand2 32'h00000005 0
+force -freeze sim:/alu/operation 4'he 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00000005 0
+force -freeze sim:/alu/operand2 32'h00000005 0
+force -freeze sim:/alu/operation 4'he 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00005555 0
+force -freeze sim:/alu/operand2 32'h000fffff 0
+force -freeze sim:/alu/operation 4'he 0
+force -freeze sim:/alu/signed 1'h0 0
+run 100 ns
+
+force -freeze sim:/alu/operand1 32'h00005555 0
+force -freeze sim:/alu/operand2 32'h000fffff 0
+force -freeze sim:/alu/operation 4'he 0
+force -freeze sim:/alu/signed 1'h1 0
+run 100 ns
